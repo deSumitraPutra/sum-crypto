@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import useWebSocket from 'react-use-websocket';
-import { useRouter } from 'next/navigation';
 
 import Row from './Row';
 import { ticker } from '@/fixtures';
@@ -69,7 +68,7 @@ describe('Row', () => {
     it('should render price, bid, bid_size, ask, ask_size and volume', () => {
       render(<Row {...props} />);
 
-      const price = screen.getByAltText(`$${ticker.last}`);
+      const price = screen.getByText(`$${ticker.last}`);
       const bid = screen.getByText(`$${ticker.bid}`);
       const bid_size = screen.getByText(`${ticker.bid_size}`);
       const ask = screen.getByText(`$${ticker.ask}`);
