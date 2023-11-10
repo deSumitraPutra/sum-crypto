@@ -5,17 +5,19 @@ import { ApexOptions } from 'apexcharts';
 import { priceData } from './priceData';
 
 interface ChartProps {
-  symbol: string
+  name: string,
+  nickname: string
 }
 
 const Chart: FunctionComponent<ChartProps> = (props) => {
+  const { name, nickname } = props;
   const options: ApexOptions = {
     chart: {
       type: 'candlestick',
       height: 350
     },
     title: {
-      text: 'CandleStick Chart',
+      text: `${name} - ${nickname}`,
       align: 'left'
     },
     xaxis: {
