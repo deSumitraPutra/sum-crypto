@@ -32,3 +32,17 @@ export const ProductIds = {
 };
 
 export const WSS_FEED_URL: string = 'wss://www.cryptofacilities.com/ws/v1';
+
+export const MOBILE_WIDTH: number = 800; // px
+
+export const ORDERBOOK_LEVELS: number = 25; // rows count
+
+export const DepthVisualizerColors = {
+  BIDS: '#113534',
+  ASKS: '#3d1e28'
+};
+
+export enum OrderType {
+  BIDS,
+  ASKS
+};
