@@ -1,0 +1,31 @@
+/* eslint-disable testing-library/no-node-access */
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+
+import TitleRow from './TitleRow.component';
+
+test('renders title row properly - not reversed', () => {
+  render(
+    <TitleRow
+      reversedFieldsOrder={false}
+      windowWidth={800}
+    />
+  );
+  const priceElement = screen.getByText('PRICE');
+  const spanElements = priceElement.querySelectorAll('span');
+  console.log(spanElements);
+  expect(spanElements[0]).toHaveTextContent('PRICE');
+});
+
+
+test('renders title row properly - reversed', () => {
+  render(
+    <TitleRow
+      reversedFieldsOrder={true}
+      windowWidth={800}
+    />
+  );
+  const priceElement = screen.getByTestId('title-row');
+  const spanElements = priceElement.querySelectorAll('span');
+  expect(spanElements[0]).toHaveTextContent('PRICE');
+});
