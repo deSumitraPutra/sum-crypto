@@ -12,7 +12,7 @@ import {
 
 const Header: FunctionComponent = () => {
   return (
-    <Container>
+    <Container data-testid="HeaderContainer">
       <MainIconContainer>
         <MainIcon src="/main-logo-w-bg.png" />
         <MainIconText>

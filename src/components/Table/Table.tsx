@@ -38,7 +38,7 @@ const Table: FunctionComponent = () => {
   };
 
   return (
-    <Container>
+    <Container data-testid="TableContainer">
       <TableContainer>
         {renderHeader()}
         {renderRow()}

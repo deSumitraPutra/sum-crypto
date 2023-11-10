@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ 'data-testid': string }>`
   width: 100%;
   display: flex;
   justify-content: space-between;
